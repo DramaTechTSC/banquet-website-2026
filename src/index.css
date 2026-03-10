@@ -1,0 +1,80 @@
+@import url("https://use.typekit.net/wup0eft.css");
+@import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+
+  --color-sky-50: oklch(96% 0.02 360);
+  --color-sky-100: oklch(88% 0.03 360);
+  --color-sky-200: oklch(76% 0.04 357);
+  --color-sky-300: oklch(69% 0.05 354);
+  --color-sky-400: oklch(64% 0.05 351);
+  --color-sky-500: oklch(59% 0.04 348);
+  --color-sky-600: oklch(51% 0.04 345);
+  --color-sky-700: oklch(40% 0.04 342);
+  --color-sky-800: oklch(32% 0.03 339);
+  --color-sky-900: oklch(24% 0.03 336);
+  --color-sky-950: oklch(16% 0.02 333);
+
+  --color-primary: oklch(67% 0.08 47);
+  --color-primary-100: oklch(82% 0.06 58);
+  --color-primary-200: oklch(74% 0.07 52);
+  --color-primary-300: oklch(67% 0.08 47);
+  --color-primary-400: oklch(62% 0.08 43);
+  --color-primary-500: oklch(56% 0.07 39);
+  --color-primary-600: oklch(50% 0.07 36);
+  --color-primary-700: oklch(44% 0.07 32);
+  --color-primary-800: oklch(38% 0.06 28);
+  --color-primary-900: oklch(32% 0.06 27);
+
+  --color-secondary: oklch(67% 0.05 78);
+  --color-secondary-100: oklch(82% 0.03 74);
+  --color-secondary-200: oklch(74% 0.04 76);
+  --color-secondary-300: oklch(67% 0.05 78);
+  --color-secondary-400: oklch(62% 0.05 80);
+  --color-secondary-500: oklch(56% 0.04 84);
+  --color-secondary-600: oklch(50% 0.04 88);
+  --color-secondary-700: oklch(44% 0.04 91);
+  --color-secondary-800: oklch(38% 0.03 94);
+  --color-secondary-900: oklch(32% 0.03 96);
+
+  --color-accent: oklch(48% 0.17 26);
+
+  --font-book: westsac, serif;
+  --font-head: transat, sans-serif;
+  --font-body: meno-display, serif;
+}
+
+body {
+  @apply font-body text-sky-50;
+}
+
+a {
+  @apply underline text-primary hover:text-primary-400 transition-colors;
+}
+
+.stack {
+  @apply absolute inset-0;
+}
+
+.stack img {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+}
+
+.option {
+  @apply text-primary relative transition-colors duration-100 hover:text-primary-200;
+}
+
+.option .outer {
+  @apply relative transition-transform duration-100 hover:scale-105 even:hover:-rotate-1 odd:hover:rotate-1;
+}
+
+.option .text {
+  @apply absolute font-book text-lg sm:text-2xl md:text-3xl lg:text-2xl flex flex-col justify-center text-center;
+  inset: 32% 15%;
+}
+
+.description {
+  @apply absolute font-body text-sky-950 flex flex-col justify-center text-center;
+  inset: 14% 13% calc(14% + 2rem) 13%;
+}
