@@ -1,5 +1,5 @@
 function Option({ index, text, input=false, state, setState, onSubmit, onClick, ...rest }) {
-  const paper = ['/images/paper1.png', '/images/paper2.png'];
+  const paper = ['/images/paper1.webp', '/images/paper2.webp'];
 
   if (input) {
     return <form className="option" {...rest} onSubmit={(e) => {

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 
 function Photo({ photo, z, rotate, ...rest }) {
-  return <div className="stack" {...rest}><img src={photo} className={classNames(z, rotate)} /></div>
+  return <div className={classNames('stack', z)} {...rest}><img src={photo} className={rotate} /></div>
 }
 
 export default Photo;

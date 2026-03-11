@@ -47,9 +47,9 @@ function App() {
     },
     {
       desc: <p>
-        A person-sized white rabbit appears in the doorway. You jump back a bit, startled, but the music puts you back
-        at ease fairly quickly. &ldquo;Password?&rdquo; the rabbit asks. You remain bewildered for a moment by the talking
-        rabbit before you are able to speak.
+        A white rabbit standing upright and wearing a tux appears in the doorway. You jump back a bit, startled, but the
+        music puts you back at ease fairly quickly. &ldquo;Password?&rdquo; the rabbit asks. You remain bewildered for a
+        moment by the talking rabbit before you are able to speak.
       </p>,
       opt: [<>&ldquo;What?&rdquo;</>, <>&ldquo;[password]&rdquo;</>],
       next: [10, 5, 12],
@@ -146,6 +146,10 @@ function App() {
   });
 
   const handleClick = contextSafe((i) => {
+    if (i === 13) {
+
+    }
+
     gsap.to(['#description', '.option'], {
       x: '50vw', ease: 'power2.in', duration: 0.5, stagger: 0.1,
       onComplete: () => {
