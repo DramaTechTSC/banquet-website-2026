@@ -179,11 +179,11 @@ function App() {
   useEffect(() => {
     if (index === 13) {
       gsap.to(swirlRef.current, { opacity: 1, duration: 5, ease: 'sine.inOut' });
-      gsap.from('#row1', { opacity: 0, duration: 1, ease: 'power1.inOut', delay: 5 });
-      gsap.from('#row2', { text: "", duration: 3, delay: 6 });
-      gsap.from('#row3', { opacity: 0, duration: 2, ease: 'power1.inOut', delay: 9 });
-      gsap.from('#row4', { opacity: 0, duration: 1, ease: 'power1.inOut', delay: 11 });
-      gsap.from('#row5', { opacity: 0, duration: 1, ease: 'power1.inOut', delay: 11.5 });
+      gsap.to('#row1', { opacity: 1, duration: 1, ease: 'power1.inOut', delay: 5 });
+      gsap.to('#row2', { text: "White Rabbit", duration: 3, delay: 6 });
+      gsap.to('#row3', { opacity: 1, scale: 1, y: 0, duration: 2, ease: 'power2.out', delay: 9 });
+      gsap.to('#row4', { opacity: 1, duration: 1, ease: 'power1.inOut', delay: 10 });
+      gsap.to('#row5', { opacity: 1, duration: 1, ease: 'power1.inOut', delay: 10.5 });
     }
   }, [index]);
 
@@ -196,12 +196,16 @@ function App() {
       { (index === 13 ) && <Swirl ref={swirlRef} className="z-10" />}
       { show && <div id="modal" className="absolute opacity-0 inset-0 z-50 flex justify-center items-center bg-[rgba(0,0,0,0.5)] p-8">
         <div className="card bg-base-300 w-3xl shadow-sm">
-          <div className="card-body">
+          <div className="card-body text-center">
             <div className="flex flex-row justify-between items-start">
               <h5 className="card-title">Event Information</h5>
               <button onClick={hideModal}>✕</button>
             </div>
-            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+            <h6>When: Saturday April 26th at *8 PM</h6>
+            <p>*7 PM if you would like to eat and socialize before the official start time</p>
+            <h6>Where: DramaTech Blackbox</h6>
+            <h6>Price: $12 for food</h6>
+            <p>RSVP as soon as possible for food, gifts, and shot glasses!</p>
             <div className="card-actions justify-center">
               <button className="btn btn-primary">RSVP</button>
             </div>
@@ -211,14 +215,14 @@ function App() {
       <nav className="z-20"><a href="/"><img src="/images/logo.png" alt="DramaTech Logo" height="813"
                                              className="h-20" /></a></nav>
       {(index >= 13) ? <main className="z-20 grow flex flex-col items-center justify-center text-center gap-2">
-        <h5 id="row1" className="mb-8">You are invited to DramaTech Theatre's...</h5>
+        <h5 id="row1" className="mb-8 text-primary-200 opacity-0">You are invited to DramaTech Theatre's...</h5>
         <span className="relative w-max text-left">
-          <h1 className="opacity-0">Alice In Wonderland</h1>
-          <h1 id="row2" className="text-accent absolute inset-0">Alice In Wonderland</h1>
+          <h1 className="opacity-0">White Rabbit</h1>
+          <h1 id="row2" className="absolute inset-0"></h1>
         </span>
-        <h3 id="row3" className="text-primary text-shadow-lg text-shadow-primary">SPEAKEASY</h3>
-        <h5 id="row4" className="mt-8 mb-6">themed Banquet</h5>
-        <div id="row5" className="flex flex-row gap-4">
+        <h3 id="row3" className="text-accent text-shadow-lg text-shadow-accent opacity-0">SPEAKEASY</h3>
+        <h5 id="row4" className="mb-6 text-primary-200 opacity-0 scale-90 translate-y-5">themed Banquet</h5>
+        <div id="row5" className="flex flex-row gap-4 opacity-0">
           <button className="btn btn-lg btn-soft btn-secondary">RSVP</button>
           <button className="btn btn-lg btn-soft btn-accent" onClick={showModal}>Info</button>
         </div>

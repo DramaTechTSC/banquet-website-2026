@@ -59,7 +59,7 @@
 }
 
 body {
-  @apply font-body text-sky-50;
+  @apply font-body text-sky-50 text-xs sm:text-sm md:text-base;
 }
 
 a {
@@ -83,7 +83,7 @@ a {
 }
 
 .option .text {
-  @apply absolute font-book text-lg sm:text-2xl md:text-3xl lg:text-2xl flex flex-col justify-center text-center;
+  @apply absolute font-book text-sm sm:text-lg md:text-2xl flex flex-col justify-center text-center;
   inset: 32% 15%;
 }
 
@@ -98,25 +98,25 @@ a {
 }
 
 h1 {
-  @apply font-book text-6xl md:text-8xl;
+  @apply font-book text-4xl sm:text-6xl md:text-7xl lg:text-8xl;
 }
 
 h2 {
-  @apply font-book text-5xl lg:text-7xl;
+  @apply font-book text-3xl sm:text-5xl md:text-6xl lg:text-7xl;
 }
 
 h3 {
-  @apply font-head text-4xl md:text-7xl;
+  @apply font-head text-2xl sm:text-5xl md:text-7xl;
 }
 
 h4 {
-  @apply font-head text-3xl md:text-6xl;
+  @apply font-head text-xl sm:text-4xl md:text-6xl;
 }
 
 h5 {
-  @apply font-body text-2xl md:text-4xl;
+  @apply font-body text-lg md:text-4xl;
 }
 
 h6 {
-  @apply font-body text-xl md:text-3xl;
+  @apply font-body text-base md:text-3xl;
 }
