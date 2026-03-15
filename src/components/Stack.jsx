@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react';
 import Photo from './Photo.jsx';
 import classNames from 'classnames';
 
-function Stack({ index }) {
+function Stack({ index, ref }) {
   const [ history, setHistory ] = useState([0]);
 
   const top = useRef(null);
@@ -37,7 +37,7 @@ function Stack({ index }) {
   ];
   const rotate = ['rotate-3', '-rotate-6', 'rotate-2', '-rotate-3', 'rotate-1', '-rotate-2'];
 
-  return <div className="relative row-span-3 min-h-[120vw] lg:min-h-0">
+  return <div ref={ref} className="relative row-span-3 min-h-[120vw] lg:min-h-0">
     <img className={classNames(
       'absolute w-1/3 top-[40%] left-[10%] origin-bottom-right', z[history.lastIndexOf(4)]
     )} src="/images/password.webp" alt="Password?" ref={password} />
@@ -48,6 +48,8 @@ function Stack({ index }) {
           z: z[idx],
           rotate: rotate[idx % rotate.length],
         };
+
+        if (props.photo === '') return <></>
 
         if (item === 4) props.rotate = rotate[(idx - 1) % rotate.length];
 
