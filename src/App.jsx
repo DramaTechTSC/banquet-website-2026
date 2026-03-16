@@ -180,10 +180,9 @@ function App() {
     if (index === 13) {
       gsap.to(swirlRef.current, { opacity: 1, duration: 5, ease: 'sine.inOut' });
       gsap.to('#row1', { opacity: 1, duration: 1, ease: 'power1.inOut', delay: 5 });
-      gsap.to('#row2', { text: "White Rabbit", duration: 3, delay: 6 });
+      gsap.to('#row2', { text: "The White Rabbit's", duration: 3, delay: 6 });
       gsap.to('#row3', { opacity: 1, scale: 1, y: 0, duration: 2, ease: 'power2.out', delay: 9 });
       gsap.to('#row4', { opacity: 1, duration: 1, ease: 'power1.inOut', delay: 10 });
-      gsap.to('#row5', { opacity: 1, duration: 1, ease: 'power1.inOut', delay: 10.5 });
     }
   }, [index]);
 
@@ -232,15 +231,14 @@ function App() {
       </div>}
       <nav className="z-20"><a href="/"><img src="/images/logo.png" alt="DramaTech Logo" height="813"
                                              className="h-20" /></a></nav>
-      {(index >= 13) ? <main className="z-20 grow flex flex-col items-center justify-center text-center gap-2">
-        <h5 id="row1" className="mb-8 text-primary-200 opacity-0">You are invited to DramaTech Theatre's...</h5>
+      {(index >= 13) ? <main className="z-20 grow flex flex-col items-center justify-center text-center gap-2 px-4">
+        <h5 id="row1" className="mb-8 text-primary-200 opacity-0">You are invited to DramaTech Theatre's 2026 Banquet:</h5>
         <span className="relative w-max text-left">
-          <h1 className="opacity-0">White Rabbit</h1>
+          <h1 className="opacity-0">The White Rabbit's</h1>
           <h1 id="row2" className="absolute inset-0"></h1>
         </span>
         <h3 id="row3" className="text-accent text-shadow-lg text-shadow-accent opacity-0">SPEAKEASY</h3>
-        <h5 id="row4" className="mb-6 text-primary-200 opacity-0 scale-90 translate-y-5">themed Banquet</h5>
-        <div id="row5" className="flex flex-row gap-4 opacity-0">
+        <div id="row4" className="flex flex-row gap-4 opacity-0 mt-4">
           <a
             className="btn btn-lg btn-soft btn-secondary"
             target="_blank" rel="noopener noreferrer"
