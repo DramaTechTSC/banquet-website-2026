@@ -255,7 +255,7 @@ function App() {
             <Option
               key={idx} index={idx} text={opt} onClick={() => handleClick(idx)}
               input={idx === 1 && index === 4} state={password} setState={setPassword}
-              onSubmit={() => handleClick(password === import.meta.env.VITE_PASSWORD ? 1 : 2)}
+              onSubmit={() => handleClick(password.toLowerCase() === import.meta.env.VITE_PASSWORD ? 1 : 2)}
             />)
         }
       </main>}
