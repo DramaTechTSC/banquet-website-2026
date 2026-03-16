@@ -62,7 +62,7 @@ body {
   @apply font-body text-sky-50 text-xs sm:text-sm md:text-base;
 }
 
-a {
+a:not(.btn) {
   @apply underline text-primary hover:text-primary-400 transition-colors;
 }
 
@@ -119,4 +119,8 @@ h5 {
 
 h6 {
   @apply font-body text-base md:text-3xl;
+}
+
+big {
+
 }

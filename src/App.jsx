@@ -201,13 +201,31 @@ function App() {
               <h5 className="card-title">Event Information</h5>
               <button onClick={hideModal}>✕</button>
             </div>
-            <h6>When: Saturday April 26th at *8 PM</h6>
-            <p>*7 PM if you would like to eat and socialize before the official start time</p>
-            <h6>Where: DramaTech Blackbox</h6>
-            <h6>Price: $12 for food</h6>
-            <p>RSVP as soon as possible for food, gifts, and shot glasses!</p>
-            <div className="card-actions justify-center">
-              <button className="btn btn-primary">RSVP</button>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="text-center">
+                <h6>When?</h6>
+                <big><strong>Saturday May 2nd at 8 PM</strong></big>
+                <p>But arrive at your leisure past 7 PM to allow time to eat and socialize before the official start time.</p>
+              </div>
+              <div className="text-center">
+                <h6>Where?</h6>
+                <big><strong>DramaTech Blackbox</strong></big>
+                <p>Although a traditional entrance may not suffice. Remember the password you have been provided.</p>
+              </div>
+              <div>
+                <h6>Price?</h6>
+                <big><strong>$12 for food, $1 per shot glass</strong></big>
+                <p>You will also be given a complementary special gift (provided that you RSVP). We hope that it will be to your liking.</p>
+              </div>
+              <div className="md:col-span-3 flex flex-col items-center gap-2">
+                <p className="text-lg md:text-xl">RSVP as soon as possible for food, gifts, and shot glasses!</p>
+                <div className="card-actions justify-center">
+                  <a
+                    className="btn btn-primary" target="_blank" rel="noopener noreferrer"
+                    href="https://forms.gle/z3zYwc1XXmKmdsha6"
+                  >RSVP</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -223,7 +241,11 @@ function App() {
         <h3 id="row3" className="text-accent text-shadow-lg text-shadow-accent opacity-0">SPEAKEASY</h3>
         <h5 id="row4" className="mb-6 text-primary-200 opacity-0 scale-90 translate-y-5">themed Banquet</h5>
         <div id="row5" className="flex flex-row gap-4 opacity-0">
-          <button className="btn btn-lg btn-soft btn-secondary">RSVP</button>
+          <a
+            className="btn btn-lg btn-soft btn-secondary"
+            target="_blank" rel="noopener noreferrer"
+            href="https://forms.gle/z3zYwc1XXmKmdsha6"
+          >RSVP</a>
           <button className="btn btn-lg btn-soft btn-accent" onClick={showModal}>Info</button>
         </div>
       </main> : <main
