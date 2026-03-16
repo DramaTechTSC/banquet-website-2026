@@ -154,8 +154,8 @@ function App() {
   });
 
   const handleClick = contextSafe((i) => {
-    if (story[index].next[i] === 13)
-      gsap.to(stackRef.current, { x: '-50vw', ease: 'power2.in', duration: 0.5 })
+    if (story[index].next[i] === 4) setPassword("");
+    if (story[index].next[i] === 13) gsap.to(stackRef.current, { x: '-50vw', ease: 'power2.in', duration: 0.5 });
 
     gsap.to(['#description', '.option'], {
       x: '50vw', ease: 'power2.in', duration: 0.5, stagger: 0.1,
